@@ -8,6 +8,10 @@ double expinv(double x, double rate) {
 }
 
 int main(int argc, char** argv) {
+  if (argc < 3) {
+    printf("usage: pp <rate> <string>\nnote: rate is per minute\n");
+    return 1;
+  }
   double rate = atof(argv[1]);
   char *s = argv[2];
 
